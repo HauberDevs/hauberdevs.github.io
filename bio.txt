@@ -1,0 +1,1 @@
+Hey, I'm Hauber! I'm an {getAgeYears("2007-09-22")}-year old hobby dev from Germany. I have experience in various programming languages such as Lua, Python and some knowledge in HTML, CSS and JS aswell as PHP.

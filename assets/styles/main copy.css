@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Variable.ttf') format('truetype-variations');
+    font-weight: 100 900; /* Full weight range supported by the font */
+    font-stretch: 75% 125%; /* Optional if the font has width variation */
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-base: 'Open Sans', sans-serif;
+    --base-bg-color: #292929;
+    --base-font-size: 15px;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--base-font-size);
+    background: var(--base-bg-color);
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    display: inline-block;       /* Ensures image can sit next to text */
+    vertical-align: middle;      /* Centers image with text baseline */
+    line-height: 1;              /* Avoid extra spacing below */
+}
+
+img.inline {
+    vertical-align: middle;
+    margin: 0 4px;
+    position: relative;
+    top: -1px; /* small optical adjustment */
+}
+
+/* The main horizontal split layout */
+.layout {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* Sidebar with logo & title */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+}
+
+.sidebar .logo {
+    max-width: 180px;
+	border-radius: 100%;
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Divider line */
+.divider {
+    width: 2px;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main content on the right */
+.content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #66b3ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #555;
+}
+
+/* Footer centered under everything */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9em;
+    color: #aaa;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
