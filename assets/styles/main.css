@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Variable.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* =========================
+   GLOBAL VARIABLES
+   ========================= */
+:root {
+    --font-base: 'Open Sans', sans-serif;
+    --base-bg-color: #292929;
+    --base-font-size: 15px;
+}
+
+/* =========================
+   BASE STYLES
+   ========================= */
+body {
+    font-family: var(--font-base);
+    font-size: var(--base-font-size);
+    background: var(--base-bg-color);
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+img.inline {
+    vertical-align: middle;
+    margin: 0 4px;
+    position: relative;
+    top: -1px;
+}
+
+/* =========================
+   LAYOUT (DESKTOP DEFAULT)
+   ========================= */
+.layout {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+}
+
+.sidebar .logo {
+    max-width: 180px;
+    border-radius: 100%;
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.divider {
+    width: 2px;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #66b3ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #555;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar {
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .sidebar .logo {
+        max-width: 120px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .content {
+        max-width: 90%;
+    }
+
+    .content h2 {
+        font-size: 1.3rem;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .layout {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .sidebar h1 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 0.8rem 0;
+    }
+}
